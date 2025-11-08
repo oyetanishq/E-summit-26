@@ -18,15 +18,15 @@ export default function CardWithForm() {
             className="block w-[90%] sm:w-[48%] md:w-[45%] lg:w-[40%] xl:w-[35%]"
           >
             {/* ✅ ADDED w-full to the Card so it fills the Link container */}
-            <Card className="w-full  bg-transparent border border-black bg-white rounded-lg transition-transform duration-300 ease-in-out hover:scale-105">
+            <Card className="w-full  bg-transparent rounded-lg transition-transform duration-300 ease-in-out hover:scale-105">
               <CardContent className="p-4">
-                <div className="w-full h-[400px] md:h-[450px] lg:h-[550px] overflow-hidden rounded-md">
+                <div className="w-full  overflow-hidden rounded-md">
                   <Image
                     unoptimized
-                    src="https://images.unsplash.com/photo-1554995207-c18c203602cb?q=80&w=2070&auto=format&fit=crop"
+                    src="/logos/E-Cell-White[1].png"
                     alt="Modern interior design"
                     width={600}
-                    height={450}
+                    height={850}
                     className="w-full h-full object-cover rounded-md"
                   />
                 </div>
@@ -34,22 +34,24 @@ export default function CardWithForm() {
             </Card>
           </Link>
 
-          {/* Card 2 with Link and Hover Effect */}
-          {/* ✅ MOVED the responsive width classes from the Card to the Link component */}
+          {/* divider */}
+          <div className="border border-white portrait:h-0 portrait:w-52 h-80">
+
+          </div>
           <Link 
             href="https://www.ecelliitbhu.com/" 
             className="block w-[90%] sm:w-[48%] md:w-[45%] lg:w-[40%] xl:w-[35%]"
           >
             {/* ✅ ADDED w-full to the Card so it fills the Link container */}
-            <Card className="w-full bg-transparent border border-black bg-white rounded-lg transition-transform duration-300 ease-in-out hover:scale-105">
+            <Card className="w-full bg-transparent rounded-lg transition-transform duration-300 ease-in-out hover:scale-105">
               <CardContent className="p-4">
-                <div className="w-full h-[400px] md:h-[450px] lg:h-[550px] overflow-hidden rounded-md">
+                <div className="w-full overflow-hidden rounded-md">
                   <Image
                     unoptimized
-                    src="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?q=80&w=1932&auto=format&fit=crop"
+                    src="/logos/SJwhite.png"
                     alt="Minimalist living room"
-                    width={600}
-                    height={450}
+                    width={20}
+                    height={20}
                     className="w-full h-full object-cover rounded-md"
                   />
                 </div>
