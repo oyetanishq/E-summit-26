@@ -89,19 +89,36 @@ const StartupJunctionForm: React.FC = () => {
     return (
         <div className="w-full max-w-2xl mx-auto">
             {/* Stepper */}
-            <div className="flex items-center justify-between mb-6">
-                {[1, 2, 3].map((s) => (
-                    <div key={s} className="flex-1 flex items-center">
-                        <div
-                            className={`flex items-center justify-center w-9 h-9 rounded-full text-sm font-medium border ${
-                                step >= (s as 1 | 2 | 3) ? "bg-blue-600 text-white border-blue-600" : "bg-transparent text-white border-gray-600"
-                            }`}
-                        >
-                            {s}
-                        </div>
-                        {s < 3 && <div className={`h-px flex-1 mx-2 ${step > s ? "bg-blue-600" : "bg-gray-700"}`}></div>}
+            <div className="flex items-center justify-between mb-6 w-full">
+                <div className="flex items-center">
+                    <div
+                        className={`flex items-center justify-center w-9 h-9 rounded-full text-sm font-medium border ${
+                            step >= 1 ? "bg-blue-600 text-white border-blue-600" : "bg-transparent text-white border-gray-600"
+                        }`}
+                    >
+                        1
                     </div>
-                ))}
+                </div>
+                <div className={`h-px flex-1 mx-2 ${step > 1 ? "bg-blue-600" : "bg-gray-700"}`}></div>
+                <div className="flex items-center">
+                    <div
+                        className={`flex items-center justify-center w-9 h-9 rounded-full text-sm font-medium border ${
+                            step >= 2 ? "bg-blue-600 text-white border-blue-600" : "bg-transparent text-white border-gray-600"
+                        }`}
+                    >
+                        2
+                    </div>
+                </div>
+                <div className={`h-px flex-1 mx-2 ${step > 2 ? "bg-blue-600" : "bg-gray-700"}`}></div>
+                <div className="flex items-center">
+                    <div
+                        className={`flex items-center justify-center w-9 h-9 rounded-full text-sm font-medium border ${
+                            step >= 3 ? "bg-blue-600 text-white border-blue-600" : "bg-transparent text-white border-gray-600"
+                        }`}
+                    >
+                        3
+                    </div>
+                </div>
             </div>
 
             {/* Step 1: Tickets */}
@@ -111,7 +128,7 @@ const StartupJunctionForm: React.FC = () => {
                         <div>
                             <h2 className="text-lg font-semibold text-white">Startup Junction Ticket</h2>
                             <p className="text-sm text-gray-300">{eventLabel}</p>
-                            <p className="text-sm text-green-400 mt-1">Free</p>
+                            <p className="text-sm text-green-400 mt-1">₹999</p>
                         </div>
                         <div className="flex items-center gap-3">
                             <button type="button" onClick={decrement} className="w-8 h-8 rounded-md border border-gray-600 text-white hover:bg-gray-800" aria-label="Decrease quantity">
@@ -206,9 +223,10 @@ const StartupJunctionForm: React.FC = () => {
                 <div className="border border-gray-700 rounded-xl p-8 bg-black/30 text-center">
                     <h2 className="text-xl font-semibold text-white">Registration received</h2>
                     <p className="text-gray-300 mt-2">
-                        You’ve registered {ticketCount} free ticket{ticketCount > 1 ? "s" : ""} for Startup Junction.
+                        You’ve registered {ticketCount} ticket{ticketCount > 1 ? "s" : ""} for Startup Junction.
                     </p>
                     <p className="text-gray-400 mt-1">Event: {eventLabel}</p>
+                    <p className="text-gray-400 mt-1">we'll contact you soon.</p>
                     <div className="mt-6">
                         <button
                             type="button"
